@@ -1,0 +1,29 @@
+.viewtab{
+ 
+}
+
+.viewtab--not-active {
+  display: none;
+}
+.viewtab__img-container {
+  width: 220px;
+  border-radius: 25px;
+  height: 400px;
+}
+.viewtab__img-container img {
+  max-width: 220px;
+  max-height: 400px;
+  object-fit: contain;
+}
+.viewtab__close-button {
+  position: absolute;
+  top: 5px;
+  right: 230px;
+}
+.viewtab__header {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 40px;
+  background-color: var(--save-button-background-color);
+}

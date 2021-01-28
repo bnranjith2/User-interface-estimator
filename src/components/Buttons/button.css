@@ -1,0 +1,57 @@
+.button {
+  width: var(--button-width);
+  height: var(--button-height);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family);
+}
+
+.button--save{
+  font-weight: 600;
+  width: 120px;
+  height: 40px;
+  color: white;
+  background-color:var(--save-button-background-color);
+}
+
+.button--add{
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  color: white;
+  background-color:var(--save-button-background-color);
+  border-radius: 50%;
+  outline: none;
+}
+
+.button--close{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: var(--input-font-color);
+  outline: none;
+  border: none;
+  right: 0;
+  top: 0;
+  margin: 10px 10px 0px 0px; 
+  
+}
+
+.button--close-components{
+  font-size: 13px;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: white;
+  outline: none;
+  
+  border: none;
+top:7px;
+right: 5px;
+  background-color: transparent;
+}
+.button--close-components:hover{
+  background-color: #ff6333
+}

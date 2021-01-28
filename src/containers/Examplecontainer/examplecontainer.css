@@ -1,0 +1,13 @@
+.example-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.example-container__sidebar-buttons{
+    padding: 20px 0px 0px 0px;
+}
+.example-container__add-component{
+    padding: 20px 0px 0px 0px;
+}
