@@ -38,10 +38,7 @@ export const localStoreData = data => {
     imgPayLoad?dataObj.push(...imgPayLoad,data.payLoad):dataObj.push(data.payLoad);
     let currentData = JSON.stringify(dataObj);
     localStorage.setItem("localData", currentData);
-    console.log("hi")
-    console.log("hi")
-    console.log("hi")
-    console.log("hi")
+
 
 
   } else {
