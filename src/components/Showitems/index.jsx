@@ -74,7 +74,7 @@ const ShowItems = ({
 
       {className != "showitemscontainer--tabs" ? (
         <div className="showitemscontainer__item-wrapper">
-          {data[0] ? (
+          { data[screenNum].dataObj.components.length ? (
             data[screenNum].dataObj.components.map(x => {
               return (
                 <Card

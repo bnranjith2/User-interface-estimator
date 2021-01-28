@@ -24,7 +24,7 @@ const Swipe = () => {
   const [screenCount, setScreenCount] = useState(0);
   const [screens, setScreens] = useState([{ name: "firstscreen" }]);
   const [history, setHistory] = useState(false);
-  const [slideNum, setSlideNum] = useState(1);
+  const [screenNum, setScreenNum] = useState(1);
   const [viewTabs, setViewTabs] = useState(false);
   // const [outLineData, setOutLineData] = useState();
   const [currentScreenNum, setCurrentScreenNum] = useState();
@@ -56,12 +56,16 @@ const Swipe = () => {
         slot="container-start"
       >
         {screens.map((screen, index) => (
+        
           <SwiperSlide slot="container-start">
             <Home
               screen={screen}
+              
               screenNum={index}
               onChange={e => {
                 setScreens([{ name: "newscreen" }, ...screens]);
+                
+                debugger;
               }}
             ></Home>
           </SwiperSlide>
@@ -80,8 +84,10 @@ const Swipe = () => {
       ) : (
         ""
       )}
+
       {viewTabs ? (
         <ViewTabs
+        
           flag={true}
           onChange={() => {
             setViewTabs(false);

@@ -105,9 +105,10 @@ const Home = ({ onChange, data, screenNum }) => {
 
   useEffect(() => {
     if (getLocalStoreData()) {
-      setSidebar(true);
       const info = getLocalStoreData();
-      console.log(info);
+     if(info[screenNum]){
+      setSidebar(true);
+     }
       // setOutLineData(info);
     }
   }, []);
@@ -124,7 +125,6 @@ const Home = ({ onChange, data, screenNum }) => {
               accept="image/*"
               multiple={false}
               onChange={(img, data) => {
-               
                 storeImage(img, data);
                 setGetImg(img);
                 setSidebar(true);
