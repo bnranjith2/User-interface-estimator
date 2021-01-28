@@ -4,7 +4,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Demo
-https://kiran-k-cc.github.io/Deadline-estimator/
+http://bnranjith2.github.io/User-interface-estimator
 
 ## Libraries Used
 
