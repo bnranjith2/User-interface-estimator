@@ -25,7 +25,6 @@ const Home = ({ onChange, data, screenNum }) => {
   const screenPayload = useContext(ScreenContext);
   let value = 0;
   const obj = {};
-
   const storeImage = (img, data) => {
     // debugger;
     obj["dataObj"] = {

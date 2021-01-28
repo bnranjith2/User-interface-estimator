@@ -21,7 +21,7 @@ export function downloadBase64File(base64Data, filename) {
       return base64Data.substring("data:image/".length, base64Data.indexOf(";base64"))
   }
   
-  export function image64toCanvasRef(canvasRef, image64, pixelCrop){
+export function image64toCanvasRef(canvasRef, image64, pixelCrop){
     const canvas = canvasRef // document.createElement('canvas');
     canvas.width = pixelCrop.width;
     canvas.height = pixelCrop.height;

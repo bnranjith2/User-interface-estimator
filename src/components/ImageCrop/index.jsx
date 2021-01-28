@@ -34,7 +34,7 @@ class ImageCrop extends Component {
       changeState: false,
       currentCropData: "",
       componentName: [],
-      
+      value:''
     };
   }
 
@@ -67,6 +67,7 @@ class ImageCrop extends Component {
   };
   handleEditClick = e => {
     const value = e.target.attributes[1].value;
+   this.setState({value:value})
     console.log(value);
     const storedData = getLocalStoreData();
     this.setState({
@@ -133,6 +134,7 @@ class ImageCrop extends Component {
                 border: "2px dotted white",
               }}
             >
+             
               <div
                 className="crop__tag"
                 value={value++} //if you chang the locatio
@@ -170,13 +172,14 @@ class ImageCrop extends Component {
                   componentName: [...this.state.componentName, e[0]],
                 });
                 getData.map((data, index) => {
+                  debugger;
                   if (index == this.state.screenDetails.screenNum) {
                     if (e.value) {
-                      data["dataObj"].components[e.value].dimension.estTime =
+                      data["dataObj"].components[this.state.value].estTime =
                         e.time;
-                      data["dataObj"].components[e.value].dimension.estUnit =
+                      data["dataObj"].components[this.state.value].estUnit =
                         e.timeUnit;
-                      data["dataObj"].components[e.value].dimension.name =
+                      data["dataObj"].components[this.state.value].name =
                         e.name;
                     } else {
                       data["dataObj"].components.push({

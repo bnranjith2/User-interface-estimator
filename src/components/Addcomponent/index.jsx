@@ -8,6 +8,7 @@ import Dropdown from "../Dropdown";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
 
 const Addcomponent = ({ onChange, data }) => {
+  debugger;
   const [name, setName] = useState("");
   const [time, setTime] = useState("");
   const [timeUnit, setTimeUnit] = useState("");
@@ -16,7 +17,7 @@ const Addcomponent = ({ onChange, data }) => {
 
   const [countName, setcountName] = useState(0);
   const [countTime, setCountTime] = useState(0);
-  const [display, setDisplay] = useState('none');
+  const [display, setDisplay] = useState("none");
   const [title, setTitle] = useState("");
 
   let count = 0;
@@ -40,17 +41,18 @@ const Addcomponent = ({ onChange, data }) => {
   };
 
   const handleOnClickSave = () => {
-    if (name.length && time.length && title != "") {
-      if(data.type!=null){
-        // onChange({value:data.payload, name: data.payload., timeUnit: title, time: time });
-      }else
-      {
-        onChange({ name: name, timeUnit: title, time: time });
+    debugger;
+    if(data.payload!=""){
+      onChange({value:data.payload, name:data.payload.name, timeUnit:data.payload.estUnit, time:data.payload.estTime });
       closeModal();
-      setDisplay('none');
-    }
+      setDisplay("none");
+    }else if (name.length && time.length && title != "") {
+      debugger;
+      onChange({ name: name, timeUnit: title, time: time });
+      closeModal();
+      setDisplay("none");
     } else {
-      setDisplay('flex');
+      setDisplay("flex");
     }
   };
 
@@ -69,8 +71,8 @@ const Addcomponent = ({ onChange, data }) => {
           <Input
             value={data.payload ? data.payload.name : name}
             onChange={e => {
-              data.payload.name=e.target.value
-              setName(e.target.value);
+            
+              data.payload?data.payload.name = e.target.value:setName(e.target.value);
               increment(e, 1);
             }}
             minlength={1}
@@ -86,8 +88,7 @@ const Addcomponent = ({ onChange, data }) => {
             maxlength={5}
             value={data.payload ? data.payload.estTime : time}
             onChange={e => {
-              data.payload.estTime=e.target.value
-              setTime(e.target.value);
+              data.payload?data.payload.estTime = e.target.value:setTime(e.target.value);
               increment(e, 2);
             }}
           ></Input>
@@ -100,19 +101,16 @@ const Addcomponent = ({ onChange, data }) => {
           value={data.payload ? data.payload.estUnit : "Select catogery"}
           options={DropdownData.Timeunit}
           onChange={e => {
-            data.payload.estUnit=e
-            setTitle(e);
+            data.payload?data.payload.estUnit= e:setTitle(e);
           }}
         />
       </div>
 
-      <div className="alert-message" style={{display:`${display}`}}>
+      <div className="alert-message" style={{ display: `${display}` }}>
         <div className="alert-message__icon">
           <ErrorOutlineIcon />
         </div>
-        <div className="alert-message__text">
-          Fill All The Required Fields.
-        </div>
+        <div className="alert-message__text">Fill All The Required Fields.</div>
       </div>
       <Button
         label={"Save"}
