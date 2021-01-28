@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/User-interface-estimator/static/css/main.313df1f5.chunk.css",
-    "main.js": "/User-interface-estimator/static/js/main.02919663.chunk.js",
-    "main.js.map": "/User-interface-estimator/static/js/main.02919663.chunk.js.map",
+    "main.css": "/User-interface-estimator/static/css/main.c7863661.chunk.css",
+    "main.js": "/User-interface-estimator/static/js/main.401394fb.chunk.js",
+    "main.js.map": "/User-interface-estimator/static/js/main.401394fb.chunk.js.map",
     "runtime-main.js": "/User-interface-estimator/static/js/runtime-main.2ff3623e.js",
     "runtime-main.js.map": "/User-interface-estimator/static/js/runtime-main.2ff3623e.js.map",
     "static/css/2.9259e620.chunk.css": "/User-interface-estimator/static/css/2.9259e620.chunk.css",
@@ -10,14 +10,14 @@
     "static/js/2.c19b28f5.chunk.js.map": "/User-interface-estimator/static/js/2.c19b28f5.chunk.js.map",
     "index.html": "/User-interface-estimator/index.html",
     "static/css/2.9259e620.chunk.css.map": "/User-interface-estimator/static/css/2.9259e620.chunk.css.map",
-    "static/css/main.313df1f5.chunk.css.map": "/User-interface-estimator/static/css/main.313df1f5.chunk.css.map",
+    "static/css/main.c7863661.chunk.css.map": "/User-interface-estimator/static/css/main.c7863661.chunk.css.map",
     "static/js/2.c19b28f5.chunk.js.LICENSE.txt": "/User-interface-estimator/static/js/2.c19b28f5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2ff3623e.js",
     "static/css/2.9259e620.chunk.css",
     "static/js/2.c19b28f5.chunk.js",
-    "static/css/main.313df1f5.chunk.css",
-    "static/js/main.02919663.chunk.js"
+    "static/css/main.c7863661.chunk.css",
+    "static/js/main.401394fb.chunk.js"
   ]
 }
