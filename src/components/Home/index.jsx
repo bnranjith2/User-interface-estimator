@@ -1,29 +1,21 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./home.css";
 import DragAndDropImage from "../DragAndDropImage";
 import Sidebar from "../Sidebar";
 import ImageCrop from "../ImageCrop";
 import ShowItems from "../Showitems";
 import { imgData } from "../../storage/storage";
-import ReplayIcon from "@material-ui/icons/Replay";
-import { Card } from "@material-ui/core";
-import { ScreenContext } from "../Swiper";
-import Addcomponent from "../Addcomponent";
-import Hamburger from "../Hamburger";
 import { localStoreData, getLocalStoreData } from "../../storage/storage";
 
 const Home = ({ onChange, data, screenNum }) => {
   const [imgSrc, setGetImg] = useState();
   const [srcName,   ] = useState("");
   const [crop, setCrop] = useState();
-  const [croppedData, setCroppedData] = useState();
-
   const [sidebar, setSidebar] = useState(false);
   const [history, setHistory] = useState(false);
   const cropValues = { unit: "px", x: 1000, y: 800, width: 0 };
 
-  const screenPayload = useContext(ScreenContext);
-  let value = 0;
+
   const obj = {};
   const storeImage = (img, data) => {
     // debugger;

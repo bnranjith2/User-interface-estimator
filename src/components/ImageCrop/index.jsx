@@ -1,7 +1,7 @@
 import React, { Component, useEffect } from "react";
 import ReactCrop from "react-image-crop";
 import "./imagecrop.css";
-import { ScreenContext } from "../Swiper";
+
 import {
   image64toCanvasRef,
   extractImageFileExtensionFromBase64,
@@ -12,7 +12,7 @@ import {
 import { getLocalStoreData, localStoreData } from "../../storage/storage";
 import Addcomponent from "../Addcomponent";
 import uuid from "react-uuid";
-import DottedBorder from "../DottedBorder";
+
 
 class ImageCrop extends Component {
   constructor(props) {
@@ -38,7 +38,7 @@ class ImageCrop extends Component {
     };
   }
 
-  static contextType = ScreenContext;
+
   cropdata = getLocalStoreData();
 
   handleCropEnd = e => {

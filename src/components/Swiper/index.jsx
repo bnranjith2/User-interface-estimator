@@ -18,8 +18,7 @@ import ViewTabs from "../ViewTabs";
 import { getLocalStoreData } from "../../storage/storage";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-export const ScreenContext = React.createContext();
-export const ScreenNumberContext = React.createContext();
+
 const Swipe = () => {
   const [screenCount, setScreenCount] = useState(0);
   const [screens, setScreens] = useState([{ name: "firstscreen" }]);
